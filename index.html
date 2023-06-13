@@ -1,42 +1,54 @@
-<!-- this page was created by: Abdullah Alqahtani ,Hatem Alsehli, Hussam Alelyani, Mohammed Abdulghani,Saleh Alkharboush, Mohammed Marrouki-->
+<!-- this page was created by: Abdullah Alqahtani, Hatem Alsehli, Hussam Alelyani, Mohammed Abdulghani, Saleh Alkharboush, Mohammed Marrouki-->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>[جداول القاعات]</title>
+  <title>[Lecture Halls Schedule]</title>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script>
+    function changeContent(hallNumber, imagePath) {
+      var mainImage = document.getElementById("main-image");
+      mainImage.src = imagePath;
+    }
+
+    function displayText() {
+      var textField = document.getElementById("textField");
+      textField.style.display = "block";
+    }
+  </script>
 </head>
 <body>
-  <header>
-    
-  </header>
+  <header></header>
   
   <div class="bg"></div>
   <div class="bg bg2"></div>
   <div class="bg bg3"></div>
   <div class="content">
-    <h1>جداول القاعات</h1>
-    
-    <h1 id="title">الرجاء إختيار رقم القاعة</h1>
-
     <div id="image-container">
       <img id="main-image" src="./images/tu_logo_icon.jpg" alt="Initial Image">
     </div>
+    
+    <h1 class="college">College of Engineering<br>Industrial Engineering Department</h1>
+    <h1>Lecture Halls Schedule<br>Please choose hall number</h1>
 
     <div id="button-container">
-      <button class="button-64" role="button" onclick="changeContent('G13', './images/image1.jpg')"><span class="text">G13</span></button>
+      <button class="button-64" role="button" onclick="changeContent('G31', './images/image1.jpg')"><span class="text">G13</span></button>
       <button class="button-64" role="button" onclick="changeContent('G31', './images/image2.jpg')"><span class="text">G31</span></button>
       <button class="button-64" role="button" onclick="changeContent('G39', './images/image3.jpg')"><span class="text">G39</span></button>
       <button class="button-64" role="button" onclick="changeContent('G56', './images/image4.jpg')"><span class="text">G56</span></button>
       <button class="button-64" role="button" onclick="changeContent('L31', './images/image5.jpg')"><span class="text">L31</span></button>
     </div>
+
+    <div>
+      <button class="button-64 return" role="button" onclick="displayText()"><span class="text">Contact Info</span></button>
+    </div>
+
+    <div id="textField" style="display: none; margin-top: 15px; font-size: 24px;">
+      Mabdulghani480@gmail.com
+    </div>
   </div>
   
   <footer>
-    <p>this page was created by: Abdullah Alqahtani ,Hatem Alsehli, Hussam Alelyani, Mohammed Abdulghani,Saleh Alkharboush, Mohammed Marrouki                  
-       
-      </p>
+    <p>This page was created by: Abdullah Alqahtani, Hatem Alsehli, Hussam Alelyani, Mohammed Abdulghani, Saleh Alkharboush, Mohammed Marrouki</p>
   </footer>
-  
-  <script src="script.js"></script>
 </body>
 </html>
